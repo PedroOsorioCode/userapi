@@ -16,7 +16,7 @@ public class PasswordValidationManagerImpl implements ValidationManager {
 
 	@Override
 	public boolean isValid(String password) {
-		return Pattern.matches(passwordRegex, password);
+		return passwordRegex != null && Pattern.matches(passwordRegex, password);
 	}
 
 }

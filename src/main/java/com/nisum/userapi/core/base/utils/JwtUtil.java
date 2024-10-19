@@ -6,28 +6,24 @@ import java.util.Map;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
 
+@Component
 public class JwtUtil {
-    private static JwtUtil instance;
     private final SecretKey SECRET_KEY = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
-    private JwtUtil() { }
-
-    public static synchronized JwtUtil getInstance() {
-        return instance == null ? new JwtUtil() : instance;
-    }
-
-    public String generateToken(String email) {
+    public String generateToken(String nombre, String email) {
         Map<String, Object> claims = new HashMap<>();
-        return createToken(claims, email);
+        claims.put("nombre", nombre);
+        claims.put("email", email);
+        return createToken(claims);
     }
 
-    private String createToken(Map<String, Object> claims, String subject) {
+    private String createToken(Map<String, Object> claims) {
         return Jwts.builder()
                 .setClaims(claims)
-                .setSubject(subject)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10)) // 10 horas de expiración
                 .signWith(SignatureAlgorithm.HS256, SECRET_KEY)

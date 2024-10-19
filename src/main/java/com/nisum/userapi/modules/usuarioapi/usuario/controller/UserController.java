@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/usuario")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequiredArgsConstructor
-public class UsuarioController {
+public class UserController {
     private final UserManager userManager;
 
     @Operation(summary = "Permite agregar un nuevo usuario")

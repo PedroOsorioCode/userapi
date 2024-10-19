@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequiredArgsConstructor
 public class HealthController {
-    @Operation(summary = "Valida la salud de la aplicacion")
+    @Operation(summary = "Valida la salud de la aplicación")
     @GetMapping("/health")
     public ResponseEntity<String> metodoGet(){
         return new ResponseEntity<>("OK", HttpStatus.OK);

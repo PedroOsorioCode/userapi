@@ -13,5 +13,5 @@ public interface UserManager {
      * Formato password
      * Usuario es unica respecto a su email
      */
-    UserCreatedDTO crear(UserDTO UserDTO);
+    UserCreatedDTO crear(UserDTO userDTO);
 }
