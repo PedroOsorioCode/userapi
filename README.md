@@ -19,9 +19,20 @@
 ## Formas de validar la aplicación.
 
 1. Despliegue local usando Maven [Ver pasos](README-Maven.md)
-2. Despliegue local usando Docker [Ver pasos]()
-3. Validación en Azure App Services [Ver pasos]()
+2. Despliegue local usando Docker [Ver pasos](README-DOCKER.md)
 
+## Diagramas de la solución
+
+Para mayor información sobre la creación de estos diagramas visita el siguiente link [Ver detalle](README-UML.md)
+
+### **Secuencia**
+![](doc/10_Diagrama_secuencia.png)
+### **Despliegue en Docker**
+![](doc/11_Diagrama_de_despliegue.png)
+### **Actividades**
+![](doc/12_Diagrama_de_actividades.png)
+### **Componentes**
+![](doc/13_Diagrama_de_componentes.png)
 
 ---
 
