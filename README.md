@@ -38,4 +38,4 @@ Para mayor información sobre la creación de estos diagramas visita el siguient
 
 **Author**: Pedro Luis Osorio Pavas [Linkedin](www.linkedin.com/in/pedro-luis-osorio-pavas-68b3a7106)
 **Start Date**: 17-10-2024
-**Update Date**: 18-10-2024
+**Update Date**: 19-10-2024
